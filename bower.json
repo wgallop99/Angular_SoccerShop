@@ -1,0 +1,21 @@
+{
+  "name": "soccer_store",
+  "version": "0.0.0",
+  "authors": [
+    "Will Gallop <wgallop99@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23",
+    "lodash": "~2.4.1"
+  }
+}

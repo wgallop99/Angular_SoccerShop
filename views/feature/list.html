@@ -1,0 +1,13 @@
+<h1>Collection</h1>
+
+<button ng-click="goToAdd()">Add Post</button>
+
+<div ng-repeat="item in prods">
+  <h3>{{item.title}}</h3>
+  <img ng-src="{{item.image}}">
+  <h2>{{item.price}}</h2>
+  <p>{{item.description}}</p>
+  <!-- <a href="#/prod/{{\$index}}">View More</a> -->
+  <button ng-click="removeProd($index)">Delete</button>
+  <button ng-click="#/prod/{{$index}}/edit">Edit</button>
+</div>
