@@ -5,15 +5,15 @@ angular.module("feature")
                 title: "Predator",
                 brand: "adidas",
                 image: "http://www.soccercorner.com/v/vspfiles/photos/SMYADV21082-2.jpg",
-                price: "$200",
+                price: "200",
                 description: "David Beckham's cleat of choice"
             },
             {
               title: "Total 90 Laser",
               brand: "Nike",
               image: "http://www.soccerfans.com/images/_full/NIK_10206_F.jpeg",
-              price: "$150",
-              description: "My personal favorite"              
+              price: "150",
+              description: "My personal favorite"
             }
         ];
 

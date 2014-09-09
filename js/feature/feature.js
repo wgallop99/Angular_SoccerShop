@@ -11,9 +11,13 @@ angular.module("feature",["ngRoute"])
               controller: "featureCtrl"
             })
 
+            .when("/prod/:id", {
+              templateUrl: "views/feature/id.html",
+              controller: "featureCtrl"
+            })
+
             .when("/prod/:id/edit", {
               templateUrl: "views/feature/edit.html",
               controller: "featureCtrl"
             })
-
     });
