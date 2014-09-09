@@ -7,7 +7,7 @@ angular.module("feature")
       $location.path("/prod/add");
     };
 
-    $scope.singleProd = featureSvc.findIndex($routeParams.idx);
+    $scope.singleProd = featureSvc.findIndex($routeParams.id);
 
     $scope.addProd = function (newProd) {
       featureSvc.addProd(newProd);

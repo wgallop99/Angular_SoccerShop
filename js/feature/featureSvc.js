@@ -4,7 +4,7 @@ angular.module("feature")
             {
                 title: "Predator",
                 brand: "adidas",
-                image: "http://www.soccercorner.com/v/vspfiles/photos/SMYADV21082-2.jpg",
+                image: "http://www.soccerfans.com/images/_full/ADI_10313_F.jpeg",
                 price: "200",
                 description: "David Beckham's cleat of choice"
             },
@@ -13,8 +13,30 @@ angular.module("feature")
               brand: "Nike",
               image: "http://www.soccerfans.com/images/_full/NIK_10206_F.jpeg",
               price: "150",
-              description: "My personal favorite"
+              description: "My personal favorite."
+            },
+            {
+              title: "Vapor",
+              brand: "Nike",
+              image: "http://i131.photobucket.com/albums/p317/biggskizz/00000-2.jpg",
+              price: "250",
+              description: "Verrry narrow."
+            },
+            {
+              title: "Legend",
+              brand: "Nike",
+              image: "http://soccerpro.scene7.com/is/image/soccerpro/366201_136_Nike_Tiempo_Legend_III_FG_set_01",
+              price: "200",
+              description: "Very comfortable with a wider fit."
+            },
+            {
+            title: "Legend",
+            brand: "Nike",
+            image: "http://www.comparestoreprices.co.uk/images/ni/nike-football-boots-nike-air-legend-sg-football-boots-black--white.jpg",
+            price: "200",
+            description: "My personal favorite"
             }
+
         ];
 
         var getProds = function(){
@@ -30,7 +52,7 @@ angular.module("feature")
         };
 
         var editProd = function (idx, prod) {
-          prods[idx] = prod;
+          prods[idx] = prods;
         }
 
         var findIndex = function (idx) {

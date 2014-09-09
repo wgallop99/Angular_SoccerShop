@@ -1,7 +1,15 @@
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+  background-image: url("http://cache4.asset-cache.net/gc/120884439-pattern-on-football-pitch-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=okB17DYFuORY9Cr4%2FYxOqyClmPbMX8c3Xxskmfc6CnY%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
 
-.addBtn {
-  display: block;
-  margin-left: 20px;
+.welcome {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .cleat {
@@ -11,6 +19,6 @@
 }
 
 img {
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 125px;
 }
