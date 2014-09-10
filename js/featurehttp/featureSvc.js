@@ -9,7 +9,7 @@ angular.module("feature")
 
         var singleProd = function(id) {
            return $http.get(prods + "/" + id);
-        }
+        };
 
         var createProd = function(prod) {
           return $http.post(prods, prod).then(function (response) {
@@ -20,6 +20,7 @@ angular.module("feature")
 
         var deleteProd = function(prod) {
           return $http.delete(prods + "/" + prod._id, prod).then(function (response) {
+                console.log(response);
                 $rootScope.$broadcast("prod:deleted");
                 $log.info("prod:deleted");
             })
@@ -36,8 +37,6 @@ angular.module("feature")
           getProds: getProds,
           singleProd: singleProd,
           addProd: createProd,
-          addCart: addCart,
-          getCart: getCart,
           deleteProd: deleteProd,
           editProd: editProd
         };

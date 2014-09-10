@@ -1,7 +1,7 @@
 angular.module("feature",["ngRoute"])
     .config(function ($routeProvider) {
         $routeProvider
-
+        
             .when("/prod/admin", {
               templateUrl: "views/featurehttp/admin.html",
               controller: "featureCtrl"

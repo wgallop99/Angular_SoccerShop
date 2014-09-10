@@ -1,7 +1,7 @@
  angular.module("mainController",
     [
-    "feature",
     "clientSide",
+    "feature",
      "ngRoute"
      ])
 

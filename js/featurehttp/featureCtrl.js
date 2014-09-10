@@ -12,33 +12,25 @@ angular.module("feature")
 
     $scope.addProd = function (prod) {
       featureSvc.addProd(prod).then(function () {
-        $location.path("/prod");
+        $location.path("/prod/admin");
       });
 
     };
 
     $scope.deleteProd = function (prod) {
       featureSvc.deleteProd(prod).then(function () {
-        $location.path("/prod");
+        $location.path("/prod/admin");
       });
     };
 
     $scope.editProd = function (prod) {
       featureSvc.editProd(prod).then(function () {
-        $location.path("/prod");
+        $location.path("/prod/admin");
       });
     };
 
     $scope.goToAdd = function () {
       $location.path("/prod/add");
-    };
-
-    $scope.goToAdmin = function () {
-      $location.path("/prod/admin");
-    };
-
-    $scope.goToCart = function () {
-      $location.path("/prod/cart");
     };
 
     $rootScope.$on("prod:deleted", function () {

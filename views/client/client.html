@@ -1,5 +1,5 @@
 <button class="admin" ng-click="goToAdmin()">Admin</button>
-<a href="#/prod/cart" class="icon"><i class="fa fa-shopping-cart cartIcon"></i><p>()</p></a>
+<a href="#/user/cart" class="icon"><i class="fa fa-shopping-cart cartIcon"></i><p>()</p></a>
 <h1>Collection</h1>
 <form>
   <select name="Filter" id="Filter" ng-model="search.brand">
@@ -12,7 +12,7 @@
   <input id="search" type="text" placeholder="Search by Name" ng-model="search.title">
 </form>
 <div class="cleat" ng-repeat="item in prods | filter : search : strict">
-  <a><h3>{{item.title}}</h3></a>
+  <a href="#/user/{{item._id}}/"><h3>{{item.title}}</h3></a>
   <h4>{{item.brand}}</h4>
   <img ng-src="{{item.image}}">
   <h2>${{item.price}}</h2>
