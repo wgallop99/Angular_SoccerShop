@@ -1,0 +1,22 @@
+<button class="admin" ng-click="goToAdmin()">Admin</button>
+<a href="#/prod/cart" class="icon"><i class="fa fa-shopping-cart cartIcon"></i><p>()</p></a>
+<h1>Collection</h1>
+<form>
+  <select name="Filter" id="Filter" ng-model="search.brand">
+    <option value=""></option>
+    <option value="Adidas">Adidas</option>
+    <option value="Nike">Nike</option>
+    <option value="Puma">Puma</option>
+    <option value="Umbro">Umbro</option>
+  </select>
+  <input id="search" type="text" placeholder="Search by Name" ng-model="search.title">
+</form>
+<div class="cleat" ng-repeat="item in prods | filter : search : strict">
+  <a><h3>{{item.title}}</h3></a>
+  <h4>{{item.brand}}</h4>
+  <img ng-src="{{item.image}}">
+  <h2>${{item.price}}</h2>
+  <p>{{item.description}}</p>
+  <button ng-click="addCart(item)">Add to Cart</button>
+  <button>Review</button>
+</div>
