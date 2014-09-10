@@ -1,10 +1,7 @@
  angular.module("mainController",
     [
     "feature",
-    //  "tiy-cookieService",
-    //  "tiy-resourceService",
-    //  "tiy-restangularService",
-    //  "tiy-httpService",
+    "cartFeature",
      "ngRoute"
      ])
 
@@ -20,5 +17,3 @@
             redirectTo: "/"
         });
 });
-
-angular.module("functionSvc", []);

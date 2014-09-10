@@ -48,16 +48,16 @@ angular.module("feature")
         };
 
         var deleteProd = function(index) {
-          prods.splice(index);
+          prods.splice(index, 1);
         };
 
         var editProd = function (idx, prod) {
           prods[idx] = prods;
-        }
+        };
 
         var findIndex = function (idx) {
           return prods[idx];
-        }
+        };
 
         return {
           getProds: getProds,

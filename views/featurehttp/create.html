@@ -1,0 +1,9 @@
+<h2>PRODUCT</h2>
+<form ng-submit="addProd(newProd)">
+    <h3><input type="text" ng-model="newProd.title" placeholder="Cleat Name"/></h3>
+    <h5><input type="text" ng-model="newProd.brand" placeholder="Brand"></h5>
+    <input type="url" ng-model="newProd.image" placeholder="Image Url">
+    <p><input type="price" ng-model="newProd.price" placeholder="Price"/></p>
+    <textarea ng-model="newProd.description" name="" id="" cols="30" rows="10" placeholder="descprition"></textarea>
+    <button type="submit">Add Cleat</button>
+</form>

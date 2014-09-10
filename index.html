@@ -5,6 +5,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css"/>
   <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/vendor/font-awesome/css/font-awesome.min.css">
 </head>
 <body ng-app="mainController">
   <h1 class="welcome">Will's Cleats</h1>
@@ -24,22 +25,22 @@
 <!-- main app module -->
 <script src="js/app.js"></script>
 
-<!-- in memory service demo -->
-<script src="js/feature/feature.js"></script>
-<script src="js/feature/featureSvc.js"></script>
-<script src="js/feature/featureCtrl.js"></script>
-<!--
-\$http service demo
-<script src="js/httpPosts/httpPosts.js"></script>
-<script src="js/httpPosts/httpPostsSvc.js"></script>
-<script src="js/httpPosts/httpPostsCtrl.js"></script>
+<!-- http scripts -->
+<script src="js/featurehttp/feature.js"></script>
+<script src="js/featurehttp/featureCtrl.js"></script>
+<script src="js/featurehttp/featureSvc.js"></script>
 
-\$resource service demo
+<!-- http cart scripts  -->
+<script src="js/cart/cart.js"></script>
+<script src="js/cart/cartCrtl.js"></script>
+<script src="js/cart/cartSvc.js"></script>
+
+<!-- \\$resource service demo
 <script src="js/resourcePosts/resourcePosts.js"></script>
 <script src="js/resourcePosts/resourcePostsSvc.js"></script>
 <script src="js/resourcePosts/resourcePostsCtrl.js"></script>
 
-\$cookieStore service demo
+\\$cookieStore service demo
 <script src="js/cookiePosts/cookiePosts.js"></script>
 <script src="js/cookiePosts/cookiePostsSvc.js"></script>
 <script src="js/cookiePosts/cookiePostsCtrl.js"></script>
