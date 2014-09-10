@@ -31,11 +31,13 @@ angular.module("feature")
                 $log.info("prod:updated");
             })
         };
-        
+
         return {
           getProds: getProds,
           singleProd: singleProd,
           addProd: createProd,
+          addCart: addCart,
+          getCart: getCart,
           deleteProd: deleteProd,
           editProd: editProd
         };

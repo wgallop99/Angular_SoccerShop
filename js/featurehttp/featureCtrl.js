@@ -1,7 +1,8 @@
 angular.module("feature")
-  .controller("featureCtrl", function ($rootScope, $scope, $location, $routeParams, featureSvc, cartSvc) {
+  .controller("featureCtrl", function ($rootScope, $scope, $location, $routeParams, featureSvc) {
 
     featureSvc.getProds().then(function (prods) {
+      console.log(prods)
       $scope.prods = prods.data;
     });
 
