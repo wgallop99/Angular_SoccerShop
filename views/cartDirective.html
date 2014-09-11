@@ -1,0 +1,31 @@
+<style>
+h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.carDescription {
+  margin: 0px;
+}
+
+img {
+  display: inline-block;
+}
+
+.stats {
+  display: inline-block;
+  min-width: 200px;
+  margin-left: 10px;
+  text-align: left;
+  margin-botton: 10px;
+  vertical-align: top;
+}
+</style>
+
+<img class="cartImage" ng-src="{{image}}">
+<div class="stats">
+  <h3 class="cartTitle">{{title}}</h3>
+  <h3>${{price}}</h3>
+  <h3 class="cartBrand">{{brand}}</h4>
+  <p class="carDescription">{{description}}</p>
+</div>

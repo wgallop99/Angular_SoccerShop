@@ -11,7 +11,14 @@ angular.module("feature")
     });
 
     $scope.addProd = function (prod) {
-      featureSvc.addProd(prod).then(function () {
+      featureSvc.addProd({
+      title: prod.title,
+      brand: prod.brand,  
+      image: prod.image,
+      price: prod.price,
+      description: prod.description,
+      review: []
+      }).then(function () {
         $location.path("/prod/admin");
       });
 

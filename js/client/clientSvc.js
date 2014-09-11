@@ -23,18 +23,20 @@ angular.module("clientSide")
         return $http.get(cartUrl);
       };
 
-      var deleteProd = function(prod) {
+      var deleteCart = function(prod) {
         return $http.delete(cartUrl + "/" + prod._id, prod).then(function (response) {
               console.log(response);
-              $rootScope.$broadcast("prod:deleted");
-              $log.info("prod:deleted");
+              $rootScope.$broadcast("item:deleted");
+              $log.info("item:deleted");
           })
       };
+
 
       return {
         addCart: addCart,
         getCart: getCart,
         getProds: getProds,
+        deleteCart: deleteCart,
         singleProd: singleProd
       };
 

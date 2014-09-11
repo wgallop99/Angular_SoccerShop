@@ -1,10 +1,19 @@
 body {
-  font-family: 'Gloria Hallelujah', cursive;
-  background-image: url("http://cache4.asset-cache.net/gc/120884439-pattern-on-football-pitch-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=okB17DYFuORY9Cr4%2FYxOqyClmPbMX8c3Xxskmfc6CnY%3D");
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
+/*   background-image: url("http://cache4.asset-cache.net/gc/120884439-pattern-on-football-pitch-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=okB17DYFuORY9Cr4%2FYxOqyClmPbMX8c3Xxskmfc6CnY%3D");
+background-size: cover;
+background-repeat: no-repeat;
+text-align: center; */
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-family: 'Jura', sans-serif;
   text-align: center;
 }
+
+
 
 .admin {
   position: absolute;
@@ -18,11 +27,11 @@ body {
   right: 50px;
   font-size: 30px;
   margin: 0px;
-  color: black;
+  color: white;
 }
 
 .icon:hover {
-  color: blue;
+  color: red;
 }
 
 .icon p {
@@ -51,4 +60,25 @@ body {
 img {
   height: 110px;
   width: 125px;
+}
+
+.cartContainer {
+  width: 55%;
+  text-align: left;
+  margin-left: 80 px;
+}
+
+.cartItem {
+  display: block;
+  margin-left: 20px;
+  border-top: 2px solid white;
+  text-align: left;
+  padding: 10px 5px;
+}
+
+.quantity {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  margin-left: -209px;
 }

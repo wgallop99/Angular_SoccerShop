@@ -1,9 +1,9 @@
-<div class="cleat" ng-repeat="item in cartUrl | filter : search : strict">
-  <a href=""><h3>{{item.title}}</h3></a>
-  <h4>{{item.brand}}</h4>
-  <img ng-src="{{item.image}}">
-  <h2>${{item.price}}</h2>
-  <p>{{item.description}}</p>
-  <button>Delete to Cart</button>
-  <button>Review</button>
+<h1>YOUR CART</h1>
+<div class="cartContainer">
+  <div class="cartItem" ng-repeat="item in cartUrl | filter : search : strict">
+    <cart-directive title="{{item.title}}" brand="{{item.brand}}" image="{{item.image}}" price="{{item.price}}" description="{{item.description}}" review="{{item.review}}"></cart-directive>
+    <form class="quantity">Quantity: <input type="text" id="qty" size="5" maxlength="5" value="1"></form>
+    <button class="cartbutton"ng-click="deleteCart(item)">Remove</button>
+    <button>Review</button>
+  </div>
 </div>

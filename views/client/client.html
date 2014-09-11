@@ -1,6 +1,6 @@
 <button class="admin" ng-click="goToAdmin()">Admin</button>
 <a href="#/user/cart" class="icon"><i class="fa fa-shopping-cart cartIcon"></i><p>()</p></a>
-<h1>Collection</h1>
+<h1>BOOT ROOM</h1>
 <form>
   <select name="Filter" id="Filter" ng-model="search.brand">
     <option value=""></option>
@@ -11,12 +11,9 @@
   </select>
   <input id="search" type="text" placeholder="Search by Name" ng-model="search.title">
 </form>
+
 <div class="cleat" ng-repeat="item in prods | filter : search : strict">
-  <a href="#/user/{{item._id}}/"><h3>{{item.title}}</h3></a>
-  <h4>{{item.brand}}</h4>
-  <img ng-src="{{item.image}}">
-  <h2>${{item.price}}</h2>
-  <p>{{item.description}}</p>
+  <user-directive title="{{item.title}}" brand="{{item.brand}}" image="{{item.image}}" price="{{item.price}}" description="{{item.description}}" review="{{item.review}}"></user-directive>
+  <button ng-click="goToShow()">Show More</button>
   <button ng-click="addCart(item)">Add to Cart</button>
-  <button>Review</button>
 </div>

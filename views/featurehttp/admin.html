@@ -1,4 +1,4 @@
-<h1>Collection</h1>
+<h1>INVENTORY</h1>
 
 <button class="addBtn" ng-click="goToAdd()">Add Cleat</button>
 <form>
@@ -12,11 +12,7 @@
   <input id="search" type="text" placeholder="Search by Name" ng-model="search.title">
 </form>
 <div class="cleat" ng-repeat="item in prods | filter : search : strict">
-  <h3>{{item.title}}</h3>
-  <h4>{{item.brand}}</h4>
-  <img ng-src="{{item.image}}">
-  <h2>${{item.price}}</h2>
-  <p>{{item.description}}</p>
+  <user-directive title="{{item.title}}" brand="{{item.brand}}" image="{{item.image}}" price="{{item.price}}" description="{{item.description}}" review="{{item.review}}"></user-directive>
   <button ng-click="deleteProd(item)">Delete</button>
   <a href="#/prod/{{item._id}}/edit">Edit Post</a>
 </div>

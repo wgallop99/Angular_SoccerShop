@@ -2,7 +2,8 @@
     [
     "clientSide",
     "feature",
-     "ngRoute"
+     "ngRoute",
+     "app.directives"
      ])
 
 .config(function ($routeProvider) {

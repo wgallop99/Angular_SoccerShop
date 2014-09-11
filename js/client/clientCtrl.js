@@ -15,8 +15,21 @@ angular.module("clientSide")
     });
 
     $scope.addCart = function(item) {
-      clientSvc.addCart(item).then(function () {
-        $location.path("/prod")
+      var newItem = {
+        title: item.title,
+        brand: item.brand,
+        image: item.image,
+        price: item.price,
+        description: item.description,
+      };
+      clientSvc.addCart(newItem).then(function () {
+        $location.path("/user");
+      })
+    };
+
+    $scope.deleteCart = function (item) {
+      clientSvc.deleteCart(item).then(function () {
+        $location.path("/user/cart")
       })
     };
 
@@ -27,5 +40,15 @@ angular.module("clientSide")
     $scope.goToCart = function () {
       $location.path("/user/cart");
     };
+
+    $scope.goToShow = function () {
+      $location.path("/user/{{item._id}}/");
+    };
+
+    $rootScope.$on("item:deleted", function () {
+      clientSvc.getCart().then(function (cartUrl) {
+        $scope.cartUrl = cartUrl.data;
+      });
+    });
 
   });
