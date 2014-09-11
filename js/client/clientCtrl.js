@@ -8,6 +8,7 @@ angular.module("clientSide")
 
     clientSvc.singleProd($routeParams.id).then(function (response) {
       $scope.singleProd = response.data;
+      console.log(response);
     });
 
     clientSvc.getCart().then(function (cartUrl) {
@@ -33,15 +34,36 @@ angular.module("clientSide")
       })
     };
 
+    $scope.addReview = function(review) {
+
+      clientSvc.singleProd($routeParams.id).success(function(item) {
+
+        $scope.singleProd = item;
+        $scope.singleProd.review.push({
+
+          author: review.author,
+          description: review.description,
+          date: new Date()
+
+        });
+
+        clientSvc.addReview(item);
+
+      });
+
+      $scope.review = {};
+
+    };
+
     $scope.goToAdmin = function () {
-      $location.path("/prod/admin");
+      $location.path("/user");
     };
 
     $scope.goToCart = function () {
       $location.path("/user/cart");
     };
 
-    $scope.goToShow = function () {
+    $scope.goToShow = function (item) {
       $location.path("/user/{{item._id}}/");
     };
 

@@ -14,6 +14,6 @@
 
 <div class="cleat" ng-repeat="item in prods | filter : search : strict">
   <user-directive title="{{item.title}}" brand="{{item.brand}}" image="{{item.image}}" price="{{item.price}}" description="{{item.description}}" review="{{item.review}}"></user-directive>
-  <button ng-click="goToShow()">Show More</button>
+  <a href="#/user/{{item._id}}/">Show More</a>
   <button ng-click="addCart(item)">Add to Cart</button>
 </div>

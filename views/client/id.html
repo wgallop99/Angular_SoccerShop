@@ -1,8 +1,20 @@
-<div>
+<return></return>
+<div class="singleProduct">
   <h3>{{singleProd.title}}</h3>
   <h5>{{singleProd.brand}}</h5>
   <img class="single"ng-src="{{singleProd.image}}">
   <h2>${{singleProd.price}}</h2>
   <p>{{singleProd.description}}</p>
-  <button>Review</button>
+  <button>See Reviews</button>
+  <form ng-submit="addReview(review)" class="reviewForm">
+    <h3>Review {{singleProd.title}}</h3>
+    <input ng-model="review.author"class="Author" type="text" placeholder="Author">
+    <textarea ng-model="review.description" class="reviewArea" name="review" id="" cols="30" rows="10" placeholder="Type Here"></textarea>
+    <button class="reviewButton" type="submit">Submit</button>
+  </form>
+  <div class="reviews" ng-repeat="review in singleProd.review">
+    <h4>{{review.author}}</h4>
+    <p>{{review.description}}</p>
+    <p>Date: {{review.date | date : format : timezone }}</p>
+  </div>
 </div>

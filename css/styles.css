@@ -45,6 +45,10 @@ h1 {
   height: 20%;
 }
 
+.singleProduct {
+  text-align: center;
+}
+
 .welcome {
   font-size: 3em;
   text-align: center;
@@ -81,4 +85,18 @@ img {
   margin: 0px;
   padding: 0px;
   margin-left: -209px;
+}
+
+.reviewForm {
+  position: absolute;
+  top: 20%;
+  right: 119px;
+}
+
+.reviewButton, .reviewArea, .Author {
+  display: block;
+}
+
+.review {
+  border-bottom: 1px solid white;
 }

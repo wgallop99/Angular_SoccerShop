@@ -8,7 +8,7 @@ angular.module("app.directives", [])
         image: "@",
         price: "@",
         description: "@",
-        review: "@"
+        review: "@",
       },
       templateUrl: "views/userDirective.html"
     };

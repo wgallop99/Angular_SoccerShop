@@ -31,13 +31,25 @@ angular.module("clientSide")
           })
       };
 
+       var addReview = function(prod) {
+
+          $http.put(prods + "/" + prod._id, prod).success(function(data) {
+
+          $rootScope.$broadcast("review:edited");
+          $log.info("review:edited");
+
+        });
+
+      };
+
 
       return {
         addCart: addCart,
         getCart: getCart,
         getProds: getProds,
         deleteCart: deleteCart,
-        singleProd: singleProd
+        singleProd: singleProd,
+        addReview: addReview
       };
 
   });
