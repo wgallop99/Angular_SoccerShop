@@ -27,4 +27,11 @@ angular.module("app.directives", [])
         },
         templateUrl: "views/cartDirective.html"
       };
+    })
+
+    .directive("return", function () {
+      return {
+        restrict: "EA",
+        templateUrl: "views/returnDirective.html"
+      };
   });
