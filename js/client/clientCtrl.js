@@ -1,5 +1,5 @@
 angular.module("clientSide")
-  .controller("clientCtrl", function ($rootScope, $scope, $location, $routeParams, clientSvc) {
+  .controller("clientCtrl", function ($rootScope, $scope, $location, $routeParams, clientSvc, $route) {
 
 
 //user list functions
@@ -98,9 +98,10 @@ angular.module("clientSide")
       });
     });
 
-    $rootScope.$on("item:updated", function () {
+    $rootScope.$on("prod:updated", function () {
       clientSvc.getCart().then(function (cartUrl) {
           $scope.cartUrl = cartUrl.data;
+          $route.reload();
       });
     })
 
