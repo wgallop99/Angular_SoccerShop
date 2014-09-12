@@ -1,10 +1,29 @@
 <return></return>
 <h1>YOUR CART</h1>
+
 <div class="cartContainer">
-  <div class="cartItem" ng-repeat="item in cartUrl | filter : search : strict">
+  <div class="cartItem" ng-repeat="item in cartUrl">
     <cart-directive title="{{item.title}}" brand="{{item.brand}}" image="{{item.image}}" price="{{item.price}}" description="{{item.description}}" review="{{item.review}}"></cart-directive>
-    <form class="quantity">Quantity: <input type="text" id="qty" size="5" maxlength="5" value="1"></form>
-    <button class="cartbutton"ng-click="deleteCart(item)">Remove</button>
-    <button>Review</button>
+    <form class="quantityForm" ng-submit="editCart(item)">
+      <select ng-model="item.quantity" class="quantity" type="Number">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <button type="submit">Update Cart</button>
+    </form>
+    <button class="cartbutton" ng-click="deleteCart(item)">Remove</button>
+    <p>{{item.price * item.quantity | currency}}</p>
   </div>
+</div>
+
+<div class="total" ng-init="cartTotal()">
+  <h2>TOTAL</h2>
+  <p>${{cartTotal}}</p>
 </div>

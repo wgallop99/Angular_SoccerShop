@@ -1,6 +1,7 @@
 angular.module("feature")
   .controller("featureCtrl", function ($rootScope, $scope, $location, $routeParams, featureSvc) {
 
+// main CRUD functions
     featureSvc.getProds().then(function (prods) {
       console.log(prods)
       $scope.prods = prods.data;
@@ -13,11 +14,12 @@ angular.module("feature")
     $scope.addProd = function (prod) {
       featureSvc.addProd({
       title: prod.title,
-      brand: prod.brand,  
+      brand: prod.brand,
       image: prod.image,
       price: prod.price,
       description: prod.description,
-      review: []
+      quantity: 1,
+      review: [],
       }).then(function () {
         $location.path("/prod/admin");
       });
@@ -36,9 +38,13 @@ angular.module("feature")
       });
     };
 
+// route function for add cleat page
+
     $scope.goToAdd = function () {
       $location.path("/prod/add");
     };
+
+//crud listeners
 
     $rootScope.$on("prod:deleted", function () {
       featureSvc.getProds().then(function (prods) {

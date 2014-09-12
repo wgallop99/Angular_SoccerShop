@@ -1,11 +1,8 @@
 body {
   font-family: 'Raleway', sans-serif;
-/*   background-image: url("http://cache4.asset-cache.net/gc/120884439-pattern-on-football-pitch-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=okB17DYFuORY9Cr4%2FYxOqyClmPbMX8c3Xxskmfc6CnY%3D");
-background-size: cover;
-background-repeat: no-repeat;
-text-align: center; */
   background-color: black;
   color: white;
+  width: 100%;
 }
 
 h1 {
@@ -99,4 +96,25 @@ img {
 
 .review {
   border-bottom: 1px solid white;
+}
+
+.total {
+  border: 10px solid white;
+  display: inline-block;
+  width: 30%;
+  position: fixed;
+  top: 30%;
+  right: 10%;
+}
+.total h2 {
+  text-align: center;
+}
+
+.total p {
+  text-align: center;
+}
+
+.quantityForm {
+  display: inline;
+
 }

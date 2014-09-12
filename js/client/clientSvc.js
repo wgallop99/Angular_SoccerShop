@@ -31,6 +31,17 @@ angular.module("clientSide")
           })
       };
 
+      var getTotal = function(){
+        var total = 0;
+        getCart().then(function(item){
+        for(var i = 0; i < $scope.item.length; i++){
+          console.log(item);
+          total += (item[i].price * item[i].quantity);
+          }
+            return total;
+        })
+      };
+
        var addReview = function(prod) {
 
           $http.put(prods + "/" + prod._id, prod).success(function(data) {
@@ -42,6 +53,12 @@ angular.module("clientSide")
 
       };
 
+      var editCart = function(prod) {
+        return $http.put(cartUrl + "/" + prod._id, prod).then(function (response) {
+              $rootScope.$broadcast("prod:updated");
+              $log.info("prod:updated");
+          })
+      };
 
       return {
         addCart: addCart,
@@ -49,7 +66,9 @@ angular.module("clientSide")
         getProds: getProds,
         deleteCart: deleteCart,
         singleProd: singleProd,
-        addReview: addReview
+        addReview: addReview,
+        getTotal: getTotal,
+        editCart: editCart
       };
 
   });
